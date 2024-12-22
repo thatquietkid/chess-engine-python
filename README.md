@@ -17,7 +17,7 @@ This repository is a result of following his videos. I highly encourage you to v
 [First episode of "Chess engine in Python"](https://www.youtube.com/watch?v=EnYui0e73Rs&ab_channel=EddieSharick)
 
 ## Technologies
-* Python 3.7.8
+* Python 3.12.5
 * pygame 2.0.1
 
 ## TODO
