@@ -4,8 +4,9 @@ Handling user input.
 Displaying current GameStatus object.
 """
 import pygame as p
-import ChessEngine, ChessAI
+import ChessEngine, ChessAI, PlayerMode
 import sys
+from button import Button
 from multiprocessing import Process, Queue
 
 BOARD_WIDTH = BOARD_HEIGHT = 512
@@ -49,11 +50,8 @@ def main():
     move_undone = False
     move_finder_process = None
     move_log_font = p.font.SysFont("Arial", 14, False, False)
-    player_one = True  # if a human is playing white, then this will be True, else False
-    player_two = False  # if a hyman is playing white, then this will be True, else False
-
     while running:
-        human_turn = (game_state.white_to_move and player_one) or (not game_state.white_to_move and player_two)
+        human_turn = (game_state.white_to_move and PlayerMode.player_one) or (not game_state.white_to_move and PlayerMode.player_two)
         for e in p.event.get():
             if e.type == p.QUIT:
                 p.quit()
@@ -250,6 +248,8 @@ def drawEndGameText(screen, text):
     text_object = font.render(text, False, p.Color('black'))
     screen.blit(text_object, text_location.move(2, 2))
 
+def get_font(size): # Returns Press-Start-2P in the desired size
+    return p.font.Font("assets/font.ttf", size)
 
 def animateMove(move, screen, board, clock):
     """

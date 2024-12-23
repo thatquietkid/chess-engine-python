@@ -22,12 +22,13 @@ This repository is a result of following his videos. I highly encourage you to v
 
 ## TODO
 - [ ] Using numpy arrays instead of 2d lists.
-- [ ] Menu to select player vs player/computer.
+- [✅] Menu to select player vs player/computer.
 - [ ] Allow dragging pieces.
 
 ## Instructions
 1. Clone this repository.
-2. Select whether you want to play versus computer, against another player locally, or watch the game of engine playing against itself by setting appropriate flags in lines 52 and 53 of `ChessMain.py`.
+2. Run the game using python MainScreen.py (follow the #installation)
+3. Select whether you want to play versus computer, against another player using options menu.
 
 ### Installation
 - Switch to Python3.
@@ -36,7 +37,7 @@ This repository is a result of following his videos. I highly encourage you to v
 git clone https://github.com/thatquietkid/chess-engine-python.git
 cd chess-engine-python/Chess/
 pip install -r requirements.txt
-python ChessMain.py
+python MainScreen.py
 ```
 
 #### Keyboard commands in-game:
